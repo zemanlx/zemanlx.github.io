@@ -79,7 +79,7 @@
 			animation: none !important;
 		}
 
-	a {
+	a, .inner-a {
 		-moz-transition: border-color 0.2s ease-in-out;
 		-webkit-transition: border-color 0.2s ease-in-out;
 		-ms-transition: border-color 0.2s ease-in-out;
@@ -90,8 +90,9 @@
 		text-decoration: none;
 	}
 
-		a:hover {
+		a:hover, .inner-a:hover {
 			border-color: transparent;
+			cursor: pointer;
 		}
 
 /* Icon */
@@ -329,6 +330,95 @@
 		top: 0;
 		width: 100%;
 	}
+
+/* Legal overlay */
+	#legal h1 {
+		font-size: 4.35em;
+		font-weight: 900;
+		letter-spacing: -0.035em;
+		line-height: 1.5em;
+	}
+
+	#legal h2 {
+		font-size: 2em;
+		font-weight: 900;
+		letter-spacing: -0.035em;
+		line-height: 1em;
+		padding-top: 0.7em;
+		text-align: left;
+	}
+
+	#legal p, #legal ul {
+		font-size: 1em;
+		font-weight: 200;
+		letter-spacing: 0em;
+		line-height: 1.2em;
+		padding-top: 0.5em;
+		padding-bottom: 0.2em;
+		text-align: justify;
+	}
+
+	#legal ul {
+		list-style: initial;
+		list-style-position: outside;
+		padding-left: 2.5em;
+	}
+
+	#legal .overlay {
+		height: 0%;
+		width: 100%;
+		position: fixed;
+		z-index: 1;
+		top: 0;
+		left: 0;
+		/* background-color: rgb(0,0,0); */
+		background-color: rgba(22, 65, 79,0.95);
+		overflow-y: scroll;
+		transition: 0.5s;
+	}
+
+	#legal .overlay-content {
+		scroll-padding: 5% 0 0 5%;
+		position: relative;
+		padding-top: 5%;
+		padding-bottom: 5%;
+		width: 70%;
+		left: 15%;
+		text-align: center;
+		margin-top: 30px;
+	}
+
+	#legal .overlay a {
+		padding: 8px;
+		text-decoration: none;
+		font-size: 36px;
+		color: #818181;
+		display: block;
+		border-bottom: initial;
+		transition: 0.3s;
+	}
+
+	#legal .overlay a:hover, #legal .overlay a:focus {
+		color: #f1f1f1;
+	}
+
+	#legal .overlay .closebtn {
+		position: absolute;
+		top: 20px;
+		right: 45px;
+		font-size: 60px;
+	}
+
+	@media screen and (max-height: 450px) {
+		#legal .overlay {overflow-y: auto;}
+		#legal .overlay a {font-size: 20px}
+		#legal .overlay .closebtn {
+		font-size: 40px;
+		top: 15px;
+		right: 35px;
+		}
+	}
+
 
 /* Main */
 
@@ -954,9 +1044,13 @@
 
 	/* Header */
 
-		/* #header h1 {
+		#legal h1 {
 			font-size: 2.5em;
-		} */
+		}
+
+		#legal h2 {
+			font-size: 1.7em;
+		}
 
 		#header p {
 			font-size: 1em;
