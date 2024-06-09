@@ -4,11 +4,8 @@
     <title>Zeman</title>
     <link>https://zeman.dev/</link>
     <description>Recent content on Zeman</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-uk</language>
-    
-	<atom:link href="https://zeman.dev/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <atom:link href="https://zeman.dev/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
